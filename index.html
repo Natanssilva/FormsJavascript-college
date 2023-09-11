@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Forms</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+	<script src="js/script.js" defer></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="container">
+	<div class="d-flex container ">
+		<form class="row g-3 needs-validation " novalidate id="myForm">
+			<h2 class="h2 p-3">Cadastro de prestador de serviços</h2>
+			<div class="col-md-4">
+			  <label for="validationCustom01" class="form-label">Nome</label>
+			  <input type="text" class="form-control" id="validationName" value="" required="">
+			  <p class="error-message"></p>
+
+			 
+			</div>
+			<div class="col-md-4">
+			  <label for="validationCustom02" class="form-label">Sobrenome</label>
+			  <input type="text" class="form-control" id="validationSurname" value="" required>
+			  <p class="error-message"></p>
+			</div>
+			<div class="col-md-4">
+			  <label for="validationCustomUsername" class="form-label">Email</label>
+			  <div class="input-group has-validation">
+				<span class="input-group-text" id="spanEmail">@</span>
+				<input type="email" class="form-control" id="validationEmail" aria-describedby="inputGroupPrepend" required>
+			  </div>
+			  <p class="error-message" id="errorEmail"></p>
+			</div>
+			<div class="col-md-6">
+			  <label for="validationCustom03" class="form-label">Website</label>
+			  <input type="url" class="form-control" id="validationWebsite" required>
+			  <p class="error-message"></p>
+			</div>
+		
+		
+			<div class="col-12">
+			  <div class="form-check">
+				<input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+				<label class="form-check-label" for="invalidCheck">
+				  Agree to terms and conditions
+				</label>
+			  </div>
+			</div>
+			<fieldset>
+				<legend class="h5">Período de disponibilidade</legend>
+		
+				<div class="campo p-3">
+					<label for="dataini">Data inicial:</label>
+					<input type="date" name="dataini" id="dataInicial" />
+					<p class="error-message" id="error-dateInit"></p>
+				</div>
+				<div class="campo p-3">
+					<label for="datafim">Data final:</label>
+					<input type="date" name="datafim" id="dataFinal"/>
+					<p class="error-message" id="error-dateFinal"></p>
+				</div>
+			</fieldset>
+			<div class="form-check form-check-inline">
+				<h5 class="h5">Principal região de atuação</h5>
+				<input class="form-check-input" type="radio" name="inlineRadioOptions" id="RadioSul" value="radio1">
+				<label class="form-check-label" for="RadioSul">Sul</label>
+			  </div>
+			  <div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="inlineRadioOptions" id="RadioSudeste" value="radio2">
+				<label class="form-check-label" for="RadioSudeste">Sudeste</label>
+			  </div>
+			  <div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="inlineRadioOptions" id="RadioCentro" value="radio-centro">
+				<label class="form-check-label" for="RadioCentro">Centro-oeste</label>
+			  </div>
+			  <div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="inlineRadioOptions" id="RadioNordeste" value="radio4">
+				<label class="form-check-label" for="RadioNordeste">Nordeste</label>
+			  </div>
+			  <div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="inlineRadioOptions" id="RadioNorte" value="radio5">
+				<label class="form-check-label" for="RadioNorte">Norte</label>
+			  </div>
+			  <p class="error-message" id="error-regioes"></p>
+			  <div class="form-check form-check-inline">
+				<h5 class="h5">Atividades pretendidas</h5>
+				<input class="form-check-input" type="checkbox" name="inlineCHECK" id="RadioAnalista" value="option1">
+				<label class="form-check-label" for="RadioAnalista">Analista</label>
+			  </div>
+			  <div class="form-check form-check-inline">
+				<input class="form-check-input" type="checkbox" name="inlineCHECK" id="RadioProgramador" value="option2">
+				<label class="form-check-label" for="RadioProgramador">Programador</label>
+			  </div>
+			  <div class="form-check form-check-inline">
+				<input class="form-check-input" type="checkbox" name="inlineCHECK" id="RadioDesigner" value="option3">
+				<label class="form-check-label" for="RadioDesigner">Web-designer</label>
+			  </div>
+			  <div class="form-check form-check-inline">
+				<input class="form-check-input" type="checkbox" name="inlineCHECK" id="RadioDBA" value="option4">
+				<label class="form-check-label" for="RadioDBA">DBA</label>
+			  </div>
+			  <div class="form-check form-check-inline">
+				<input class="form-check-input" type="checkbox" name="inlineCHECK" id="RadioAdm" value="option5">
+				<label class="form-check-label" for="RadioAdm">Administrador de rede</label>
+				<p class="error-message" id="error-active"></p>
+			  </div>
+			  <div>
+				<fieldset class="container p-3">
+					<legend>Ações</legend>
+						<button type='submit' class="btn btn-outline-danger" id="button-submit">Enviar</button>
+						<button type='reset' class="btn btn-outline-primary">Reiniciar</button>
+						<button type='button' class="btn btn-outline-primary">Ajuda</button>
+				</fieldset >
+			  </div>
+		  </form>
+	</div>
+</body>
